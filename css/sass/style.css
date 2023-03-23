@@ -4,6 +4,11 @@ body {
   justify-content: center;
 }
 
+.character-info__origin, .character-info__gender, .character-info__specie, .character-info__name {
+  color: #FFF;
+  font-weight: 600;
+}
+
 body {
   background-color: #171d26;
   font-family: "Source Sans Pro", sans-serif;
@@ -61,4 +66,79 @@ body {
 }
 .index-page__button:hover::before {
   width: 100%;
+}
+
+.home {
+  display: block;
+}
+
+.home__title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #97ce4c;
+}
+
+.characters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 2rem;
+}
+
+.character-card {
+  max-width: 20rem;
+  box-shadow: 2px 2px 3px 4px #acf1a5;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.character-card__image {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.character-card__status {
+  background-color: #5f1daf;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  max-width: 5rem;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  position: absolute;
+  right: 0;
+  top: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+.character-card__status.character-card__status--Alive {
+  background-color: #157a15;
+}
+.character-card__status.character-card__status--Dead {
+  background-color: #b7203c;
+}
+
+.character-info {
+  padding: 1rem;
+}
+.character-info-labels {
+  display: flex;
+  gap: 3rem;
+  margin: 0.3rem 0;
+}
+.character-info__label {
+  color: #e89ac7;
+  font-size: 0.8rem;
+}
+.character-info__name {
+  margin: 0.3rem 0 1rem 0;
+  font-weight: bold;
+}
+.character-info__specie {
+  color: #f0e14a;
+}
+.character-info__gender {
+  color: #00b1c8;
+}
+.character-info__origin {
+  color: #97ce4c;
 }/*# sourceMappingURL=style.css.map */
