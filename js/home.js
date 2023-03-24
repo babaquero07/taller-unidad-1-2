@@ -1,10 +1,14 @@
+let characters = [];
+
 function getCharacters() {
   const charactersIds = Array.from({ length: 20 }, (_, index) => index + 1);
 
   fetch(`https://rickandmortyapi.com/api/character/${charactersIds}`)
     .then((response) => response.json())
-    .then((data) =>
-      data.forEach(({ image, status, name, species, gender, origin }) => {
+    .then((data) => {
+      characters = data;
+
+      characters.forEach(({ image, status, name, species, gender, origin }) => {
         const stringElement = `
             <article class="character-card">
                 <img class="character-card__image" src="${image}"
@@ -37,9 +41,23 @@ function getCharacters() {
         );
 
         charactersContainer.appendChild(characterCard.body.firstChild);
-      })
-    )
-    .catch((error) => console.error(error));
+      });
+    })
+    .catch((error) => console.error(error))
+    .finally(() => {
+      const loader = document.querySelector(".loader-container");
+      const contentWrapper = document.querySelector(".content-wrapper");
+
+      setTimeout(() => {
+        loader.style.display = "none";
+        contentWrapper.style.display = "block";
+      }, 1500);
+    });
 }
 
 getCharacters();
+
+function filterByStatus() {
+  const status = document.getElementById("status").value;
+  console.log(status);
+}
