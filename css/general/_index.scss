@@ -33,13 +33,13 @@ body {
 
     &__button {
         position: relative;
-        background-color: rgb(230, 34, 77);
+        background-color: $btn-bg-color;
         border-radius: $btn-border-radius;
-        box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+        box-shadow: $btn-box-shadow;
         padding: 1rem 1.5rem;
         background-repeat: no-repeat;
         box-sizing: border-box;
-        color: #fff;
+        color: $btn-color-text;
         border: none;
         font-size: 1rem;
         transition: all .3s ease-in-out;

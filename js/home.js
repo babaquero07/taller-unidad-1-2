@@ -52,7 +52,7 @@ function insertFilteredCharacters(characters) {
 
 // Call to API
 function getCharacters() {
-  const charactersIds = Array.from({ length: 50 }, (_, index) => index + 1);
+  const charactersIds = Array.from({ length: 10 }, (_, index) => index + 1);
 
   fetch(`https://rickandmortyapi.com/api/character/${charactersIds}`)
     .then((response) => response.json())

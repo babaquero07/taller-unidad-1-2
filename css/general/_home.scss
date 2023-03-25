@@ -1,3 +1,5 @@
+@import '../mixins/mixins';
+
 .home {
     display: block;
 }
@@ -95,6 +97,92 @@
         width: 90%;
         max-width: 800px;
     }
+}
+
+.character-filters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem 0;
+
+    &__button {
+        border-radius: $btn-border-radius;
+        background-color: $btn-bg-color;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        color: $btn-color-text;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+            box-shadow: $btn-box-shadow;
+        }
+
+        &:active {
+            transform: scale(0.97);
+            box-shadow: $btn-box-shadow;
+        }
+    }
+}
+
+// Responsive
+@media screen and (max-width: 970px) {
+    .character-filters-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+// End
+
+.filter-option {
+    &__label.filter-option {
+        &__label {
+            &--status {
+                @include option-label($status-label-color);
+            }
+
+            &--specie {
+                @include option-label($specie-label-color);
+            }
+
+            &--gender {
+                @include option-label($gender-label-color);
+            }
+        }
+    }
+}
+
+.select-container {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  width: 10rem;
+  height: 2rem;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+      no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, $glass-icon 3em, $glass 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  &__option {
+    color: inherit;
+    background-color: $option;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-ms-expand {
+        display: none;
+    }
+  }
 }
 
 .characters-container {

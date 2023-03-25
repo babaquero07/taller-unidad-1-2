@@ -154,6 +154,84 @@ body {
   max-width: 800px;
 }
 
+.character-filters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+.character-filters-container__button {
+  border-radius: 0.5rem;
+  background-color: rgb(230, 34, 77);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.character-filters-container__button:hover {
+  box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+}
+.character-filters-container__button:active {
+  transform: scale(0.97);
+  box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+}
+
+@media screen and (max-width: 970px) {
+  .character-filters-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.filter-option__label.filter-option__label--status {
+  color: #FFF;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.filter-option__label.filter-option__label--specie {
+  color: #f0e14a;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.filter-option__label.filter-option__label--gender {
+  color: #00b1c8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.select-container {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  width: 10rem;
+  height: 2rem;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.select-container__option {
+  color: inherit;
+  background-color: #320a28;
+}
+.select-container__option:focus {
+  outline: none;
+}
+.select-container__option::-ms-expand {
+  display: none;
+}
+
 .characters-container {
   display: flex;
   justify-content: center;
