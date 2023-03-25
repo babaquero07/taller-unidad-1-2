@@ -33,27 +33,26 @@
         </header>
 
         <section class="character-filters-container">
-            
                 <label for="status">Status</label>
                 <select id="status" id="status" onchange="filterByStatus()">
                     <option value="Alive">Alive</option>
                     <option value="Dead">Dead</option>
-                    <option value="Unknown">Unknown</option>
+                    <option value="unknown">Unknown</option>
                 </select>
                 <label for="specie">Specie</label>
                 <select id="specie" onchange="filterBySpecie()">
-                    <option value="1">Human</option>
-                    <option value="2">Alien</option>
+                    <option value="Human">Human</option>
+                    <option value="Alien">Alien</option>
                 </select>
                 <label for="gender">Gender</label>
-                <select id="gender">
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                    <option value="3">Unknown</option>
+                <select id="gender" onchange="filterByGender()">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="unknown">Unknown</option>
                 </select>
-            
-        </section>
 
+                <button type="reset" onclick="resetFilters()">Reset filters</button>
+        </section>
         <section class="characters-container">
         </section>
     </div>
