@@ -4,14 +4,15 @@ let charactersInfo = [];
 function insertCharactersCard(charactersCards) {
   const charactersContainer = document.querySelector(".characters-container");
 
-  charactersCards.forEach(character => {
+  charactersCards.forEach((character) => {
     charactersContainer.appendChild(character.body.firstChild);
-  })
+  });
 }
 
 function createCharactersCards(charactersData) {
-  const charactersCards = charactersData.map(({ image, status, name, species, gender, origin }) => {
-    const stringElement = `
+  const charactersCards = charactersData.map(
+    ({ image, status, name, species, gender, origin }) => {
+      const stringElement = `
         <article class="character-card">
             <img class="character-card__image" src="${image}"
             alt="character img">
@@ -33,11 +34,9 @@ function createCharactersCards(charactersData) {
         </article>
     `;
 
-    return new DOMParser().parseFromString(
-      stringElement,
-      "text/html"
-    );
-  });
+      return new DOMParser().parseFromString(stringElement, "text/html");
+    }
+  );
 
   insertCharactersCard(charactersCards);
 }
@@ -52,7 +51,7 @@ function insertFilteredCharacters(characters) {
 
 // Call to API
 function getCharacters() {
-  const charactersIds = Array.from({ length: 10 }, (_, index) => index + 1);
+  const charactersIds = Array.from({ length: 150 }, (_, index) => index + 1);
 
   fetch(`https://rickandmortyapi.com/api/character/${charactersIds}`)
     .then((response) => response.json())
@@ -66,10 +65,8 @@ function getCharacters() {
       const loader = document.querySelector(".loader-container");
       const contentWrapper = document.querySelector(".content-wrapper");
 
-      setTimeout(() => {
-        loader.style.display = "none";
-        contentWrapper.style.display = "block";
-      }, 1500);
+      loader.style.display = "none";
+      contentWrapper.style.display = "block";
     });
 }
 getCharacters();
@@ -77,21 +74,27 @@ getCharacters();
 // Filter functions
 function filterByStatus() {
   const status = document.getElementById("status").value;
-  const characters = charactersInfo.filter(character => character.status === status);
+  const characters = charactersInfo.filter(
+    (character) => character.status === status
+  );
 
   insertFilteredCharacters(characters);
 }
 
 function filterBySpecie() {
   const specie = document.getElementById("specie").value;
-  const characters = charactersInfo.filter(character => character.species === specie);
+  const characters = charactersInfo.filter(
+    (character) => character.species === specie
+  );
 
   insertFilteredCharacters(characters);
 }
 
 function filterByGender() {
   const gender = document.getElementById("gender").value;
-  const characters = charactersInfo.filter(character => character.gender === gender);
+  const characters = charactersInfo.filter(
+    (character) => character.gender === gender
+  );
 
   insertFilteredCharacters(characters);
 }

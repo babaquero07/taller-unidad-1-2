@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/icons/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/sass/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="./js/comments.js" type="text/javascript"></script>
+    <title>Comments</title>
+</head>
+
+<body class="comments">
+    <!-- Comments -->
+    <section class="comments-container">
+        <!-- Default comment -->
+        <div class="comment-card">
+            <div class="card-top-part">
+                <div class="left-part">
+                    <div class="user-name">
+                        <p class="user-name__name">Jane Doe</p>
+                        <p class="user-name__comment-date">3/25/2023</p>
+                    </div>
+                    <div class="comment">
+                        <p class="comment__text">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem earum eaque recusandae!
+                            Eum cumque!
+                        </p>
+                    </div>
+                </div>
+                <div class="right-part">
+                    <div class="user-photo">
+                        <img class="user-photo__photo" src="https://randomuser.me/api/portraits/women/79.jpg"
+                            class="photo">
+                    </div>
+                </div>
+            </div>
+            <div class="card-bottom-part">
+                <div class="bottom-part">
+                    <a class="link edit-comment">
+                        <span class="icon">
+                            <img src="./assets/icons/icons8-pencil-20.png" alt="edit icon">
+                        </span>
+                        Edit
+                    </a>
+                </div>
+                <div class="bottom-part">
+                    <a class="link delete-comment">
+                        <span class="icon">
+                            <img src="./assets/icons/icons8-remove-20.png" alt="remove icon">
+                        </span>
+                        Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Form -->
+    <section class="form-section">
+        <div class="form-container">
+            <span class="form-container__title">Leave a Comment</span>
+            <form class="comments-form" onsubmit="createComment(this.Form)">
+                <div class="group">
+                    <input class="group__input" placeholder="" type="text" required="true" id="user" name="user">
+                    <label class="group__label" for="name">Name</label>
+                </div>
+                <div class="group">
+                    <label class="group__label" for="comment">Comment</label>
+                    <textarea class="group__input" placeholder="" id="comment" name="comment" rows="5"
+                        required="true"></textarea>
+                </div>
+                <button class="comments-form__button" type="submit">Add comment</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
