@@ -1,7 +1,9 @@
 ```
 # Rick and Morty Character API
 
-This project utilizes HTML, SASS, and JavaScript to connect to the Rick and Morty API and retrieve information about 150 characters. The user can interact with the API-provided information by applying filters for gender, status, and species. Additionally, the project includes a page for users to add, edit, and delete comments.
+This project was made with HTML, SASS, and JavaScript.
+
+The project connects with Rick and Morty API and retrieve information about 150 characters. Allows the user interact with the API-provided information by applying filters for gender, status, and species. Additionally, the project includes a page for users to add, edit, and delete comments.
 
 ## Technologies Used
 - HTML
