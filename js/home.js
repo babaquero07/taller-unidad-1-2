@@ -65,8 +65,11 @@ function getCharacters() {
       const loader = document.querySelector(".loader-container");
       const contentWrapper = document.querySelector(".content-wrapper");
 
-      loader.style.display = "none";
-      contentWrapper.style.display = "block";
+      // To shows the loader. It's just for the demo
+      setTimeout(() => {
+        loader.style.display = "none";
+        contentWrapper.style.display = "block";
+      }, 1500);
     });
 }
 getCharacters();

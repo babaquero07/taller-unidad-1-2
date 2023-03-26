@@ -25,3 +25,7 @@ The project connects with Rick and Morty API and retrieve information about 150 
 1. Clone the repository to your local machine
 2. Open the `index.html` file in your web browser
 3. Enjoy :)
+
+## Public Page
+
+<a href="https://babaquero07.github.io/taller-unidad-1-2/" target="_blank">Rick and Morty page</a>
