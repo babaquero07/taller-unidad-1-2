@@ -249,6 +249,7 @@ body {
 }
 
 .character-card {
+  width: 20rem;
   max-width: 20rem;
   box-shadow: 2px 2px 3px 4px #acf1a5;
   border-radius: 0.5rem;
@@ -308,14 +309,14 @@ body {
 
 .comments {
   display: block;
+  margin: 0;
 }
 
 .comments-container {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100vw;
-  height: 30vh;
   gap: 3rem;
   padding: 2rem;
 }
@@ -391,6 +392,7 @@ body {
 .user-name__name {
   font-size: 1.2rem;
   margin: 0;
+  word-break: break-word;
 }
 .user-name__comment-date {
   font-size: 0.75rem;
@@ -421,7 +423,7 @@ body {
 }
 
 .form-section {
-  margin: 2rem 0;
+  margin: 4rem 2rem;
 }
 
 .form-container {
